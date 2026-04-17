@@ -286,6 +286,28 @@ h4 {
 .section-light {
   background: var(--color-card-light-gw);
   color: var(--color-text-dark-gw);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-light::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 60px,
+    rgba(198, 40, 40, 0.03) 60px,
+    rgba(198, 40, 40, 0.03) 120px
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section-light > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .section-dark {
