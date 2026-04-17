@@ -124,6 +124,51 @@ export default function InstantQuotePage() {
               GroundWorks Construction LLC • San Antonio, TX •{' '}
               <a href="tel:2103432878">210-343-2878</a>
             </p>
+
+            {/* ── Legal Disclosure ── */}
+            <div className="iq-disclosure">
+              <div className="iq-disclosure-header">
+                <i className="fas fa-file-contract" aria-hidden="true" />
+                <p>Liability Limitation &amp; Preliminary Estimate Disclosure</p>
+              </div>
+
+              <ol className="iq-disclosure-list">
+                <li>
+                  <strong>Non-Binding Nature:</strong> This estimate is generated automatically for
+                  informational purposes only and does not constitute a formal offer, contract, or
+                  guaranteed bid for services. Ground Works Construction LLC is not bound by the
+                  figures produced by this tool.
+                </li>
+                <li>
+                  <strong>Reliance on User Data:</strong> The accuracy of this estimate is entirely
+                  dependent on the dimensions and site conditions provided by the User. Ground Works
+                  Construction LLC assumes no responsibility for errors or omissions in
+                  user-provided data, including inaccurate measurements or misidentified soil types.
+                </li>
+                <li>
+                  <strong>Unforeseen Site Conditions:</strong> Excavation costs are subject to
+                  significant fluctuation based on subsurface conditions that cannot be determined
+                  by an online tool, including but not limited to:
+                  <ul>
+                    <li>Encountering solid rock or caliche not previously disclosed.</li>
+                    <li>Unmarked utility lines or hazardous materials.</li>
+                    <li>Groundwater or drainage issues.</li>
+                    <li>Access constraints for heavy equipment.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Final Bid Requirement:</strong> A final, binding quote is only provided
+                  following a physical site inspection or a comprehensive review of certified
+                  engineering blueprints by a Ground Works estimator.
+                </li>
+                <li>
+                  <strong>Limitation of Liability:</strong> By using this tool, the User agrees
+                  that Ground Works Construction LLC, its owners, and its technical consultants
+                  (TxAI Consulting LLC) shall not be held liable for any financial decisions,
+                  project planning, or damages resulting from reliance on this preliminary estimate.
+                </li>
+              </ol>
+            </div>
           </div>
         </section>
       </main>

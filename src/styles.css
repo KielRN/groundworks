@@ -1035,6 +1035,71 @@ h4 {
   text-decoration: none;
 }
 
+/* ── Legal Disclosure ── */
+.iq-disclosure {
+  margin-top: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  background: #161616;
+  padding: 24px 28px;
+}
+
+.iq-disclosure-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.iq-disclosure-header i {
+  color: #888;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.iq-disclosure-header p {
+  font-family: var(--font-heading-gw);
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #888;
+  margin: 0;
+}
+
+.iq-disclosure-list {
+  margin: 0;
+  padding-left: 18px;
+  color: #888;
+  font-size: 12.5px;
+  line-height: 1.8;
+  list-style: decimal;
+}
+
+.iq-disclosure-list li {
+  margin-bottom: 10px;
+}
+
+.iq-disclosure-list li:last-child {
+  margin-bottom: 0;
+}
+
+.iq-disclosure-list strong {
+  color: #b0b0b0;
+}
+
+.iq-disclosure-list ul {
+  margin: 8px 0 0;
+  padding-left: 16px;
+  list-style: disc;
+  color: #777;
+}
+
+.iq-disclosure-list ul li {
+  margin-bottom: 4px;
+}
+
 @media (max-width: 768px) {
   .iq-header {
     flex-direction: column;

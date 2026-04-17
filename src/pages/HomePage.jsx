@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SERVICES = [
   {
@@ -46,18 +46,7 @@ const EQUIPMENT = [
 ];
 
 export default function HomePage() {
-  const [quoteOpen, setQuoteOpen] = useState(false);
-
-  useEffect(() => {
-    const scriptId = 'txai-form-embed-script';
-    if (document.getElementById(scriptId)) return;
-
-    const script = document.createElement('script');
-    script.id = scriptId;
-    script.src = 'https://link.texasaiconsulting.com/js/form_embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -119,7 +108,7 @@ export default function HomePage() {
             <span>Utility Lines</span>
           </div>
 
-          <button className="btn-gw" onClick={() => setQuoteOpen(true)}>
+          <button className="btn-gw" onClick={() => navigate('/instant-quote')}>
             <i className="fas fa-hard-hat" aria-hidden="true" />
             Free Estimate →
           </button>
@@ -321,35 +310,7 @@ export default function HomePage() {
         </div>
       </footer>
 
-      {quoteOpen && (
-        <div className="modal-overlay" role="dialog" aria-modal="true" aria-label="Free Estimate Form">
-          <div className="modal-card">
-            <button className="modal-close" onClick={() => setQuoteOpen(false)} aria-label="Close Free Estimate form">
-              ×
-            </button>
-            <h3>Free Estimate</h3>
-            <p>Complete the quick instant quote form below.</p>
 
-            <iframe
-              src="https://link.texasaiconsulting.com/widget/form/ely2PgEcRzcBhOAa2Eyp"
-              id="inline-ely2PgEcRzcBhOAa2Eyp"
-              data-layout="{'id':'INLINE'}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="Instant Quote"
-              data-height="1333"
-              data-layout-iframe-id="inline-ely2PgEcRzcBhOAa2Eyp"
-              data-form-id="ely2PgEcRzcBhOAa2Eyp"
-              title="Instant Quote"
-              className="quote-embed"
-            />
-          </div>
-        </div>
-      )}
     </>
   );
 }
