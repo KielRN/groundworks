@@ -138,7 +138,14 @@ export default function HomePage() {
 
             <div className="services-grid">
               {SERVICES.map((service) => (
-                <article className="service-card" key={service.title}>
+                <article
+                  className="service-card"
+                  key={service.title}
+                  onClick={() => navigate('/instant-quote')}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => e.key === 'Enter' && navigate('/instant-quote')}
+                >
                   <div className="service-icon">{service.icon}</div>
                   <h3>{service.title}</h3>
                   <ul>
@@ -146,6 +153,7 @@ export default function HomePage() {
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
+                  <p className="service-card-cta">Get a Free Estimate →</p>
                 </article>
               ))}
             </div>

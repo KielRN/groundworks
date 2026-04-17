@@ -357,12 +357,34 @@ h4 {
   border: 2px solid #e0e0e0;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .service-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 50px rgba(198, 40, 40, 0.2);
   border-color: var(--color-red-gw);
+}
+
+.service-card:focus-visible {
+  outline: 2px solid var(--color-red-gw);
+  outline-offset: 3px;
+}
+
+.service-card-cta {
+  margin: 16px 0 0;
+  text-align: center;
+  color: var(--color-red-gw);
+  font-family: var(--font-heading-gw);
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.service-card:hover .service-card-cta {
+  opacity: 1;
 }
 
 .service-icon {
